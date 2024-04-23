@@ -88,7 +88,7 @@ void eraseMap(HashMap * map,  char * key)
 //---------------------------------------------------------
 Pair * searchMap(HashMap * map,  char * key)
 {
-  long pos = hash(key, map->capacity);
+  long pos = hash(key, map->capacity); //Se usa hash para encontrar la posición.
   while (map->buckets[pos] != NULL)
   {
     if (strcmp(map->buckets[pos]->key, key) == 0)
