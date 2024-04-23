@@ -93,12 +93,11 @@ Pair * searchMap(HashMap * map,  char * key)
   {
     if (strcmp(map->buckets[pos]->key, key) == 0)
     {
+      map->current = pos;
       return map->buckets[pos];
     }
     pos = (pos + 1) % map->capacity; //avanza al siguiente índice en el mapa.
-    
   }
-  map->current = pos;
   return NULL;  
 }
 //---------------------------------------------------------
