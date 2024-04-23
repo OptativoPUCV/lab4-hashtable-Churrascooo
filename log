@@ -34,3 +34,15 @@ Tue 23 Apr 2024 07:12:51 PM UTC:
  tests:  5|4
 total_score: 30/70
 0480194
+Tue 23 Apr 2024 07:13:34 PM UTC: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:55:23: error: ‘pos’ undeclared (first use in this function); did you mean ‘pow’?
+   55 |   while (map->buckets[pos] != NULL && map->buckets[pos]->key != NULL)
+      |                       ^~~
+      |                       pow
+hashmap.c:55:23: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+2b4cee1
