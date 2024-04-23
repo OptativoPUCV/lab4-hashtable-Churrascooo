@@ -96,9 +96,10 @@ Pair * searchMap(HashMap * map,  char * key)
       return map->buckets[pos];
     }
     pos = (pos + 1) % map->capacity; //avanza al siguiente índice en el mapa.
-    map->current = pos;
+    
   }
-  return NULL;
+  map->current = pos;
+  return NULL;  
 }
 //---------------------------------------------------------
 Pair * firstMap(HashMap * map) {
