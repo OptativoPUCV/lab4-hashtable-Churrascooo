@@ -97,6 +97,7 @@ Pair * searchMap(HashMap * map,  char * key)
     }
     pos = (pos + 1) % map->capacity; //avanza al siguiente índice en el mapa.
   }
+  map->current = pos;
   return NULL;
 }
 //---------------------------------------------------------
