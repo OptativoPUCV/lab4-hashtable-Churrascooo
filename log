@@ -238,3 +238,9 @@ hashmap.c:61:10: error: variable ‘capacity’ set but not used [-Werror=unused
 cc1: all warnings being treated as errors
 Compilation failed
 64a314b
+Wed 24 Apr 2024 11:25:03 PM UTC: 
+ hashmap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+ tests:  11|2
+total_score: 50/70
+6cc595c
