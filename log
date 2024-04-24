@@ -136,3 +136,17 @@ Tue 23 Apr 2024 07:39:06 PM UTC:
  tests:  8|3
 total_score: 40/70
 9c33051
+Wed 24 Apr 2024 11:08:44 PM UTC: 
+ hashmap.c | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:63:10: error: unused variable ‘capacity’ [-Werror=unused-variable]
+   63 |     long capacity = map->capacity;
+      |          ^~~~~~~~
+hashmap.c:62:13: error: unused variable ‘buckets’ [-Werror=unused-variable]
+   62 |     Pair ** buckets = map->buckets;
+      |             ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+27c8877

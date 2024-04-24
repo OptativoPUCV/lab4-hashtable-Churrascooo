@@ -56,9 +56,18 @@ void insertMap(HashMap * map, char * key, void * value)
   map->current = pos;
 }
 //---------------------------------------------------------
-void enlarge(HashMap * map) {
+void enlarge(HashMap * map)
+{
     enlarge_called = 1; //no borrar (testing purposes)
+    Pair ** buckets = map->buckets;
+    long capacity = map->capacity;
 
+    map->capacity *= 2;
+    map->buckets = (Pair **)calloc(map->capacity, sizeof(Pair *));
+
+  map->size = 0;
+
+  
 
 }
 //---------------------------------------------------------
