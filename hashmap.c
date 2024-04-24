@@ -70,11 +70,10 @@ void enlarge(HashMap * map)
     if (map->buckets != NULL)
     {
       insertMap(map, map->buckets[i]->key, map->buckets[i]->value)
-      map->size++;  
+      (map->size)++;  
     }
-    return;
   }
-  
+  return;
 }
 //---------------------------------------------------------
 HashMap * createMap(long capacity)
