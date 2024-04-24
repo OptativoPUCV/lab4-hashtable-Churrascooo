@@ -74,11 +74,11 @@ void enlarge(HashMap * map)
   {
     if (map->buckets != NULL)
     {
-      insertMap(map, map->buckets[i]->key, map->buckets[i]->value)
+      insertMap(map, oldBuckets[i]->key, oldBuckets[i]->value);
       (map->size)++;  
     }
   }
-  return;
+  free(oldBuckets);
 }
 //---------------------------------------------------------
 HashMap * createMap(long capacity)
