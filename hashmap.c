@@ -98,12 +98,12 @@ void eraseMap(HashMap * map,  char * key)
   pos = hash(key, map->capacity);
   if (strcmp(map->buckets[pos]->key, key) == 0)
   {
-    map->buckets[pos] = NULL;
+    map->buckets[pos]->key = NULL;
     map->size--;
   }
   else
   {
-    while (map->buckets[pos]->key != NULL)
+    while (map->buckets[pos] != NULL)
       {
         if (strcmp(map->buckets[pos]->key, key) == 0)
         {
