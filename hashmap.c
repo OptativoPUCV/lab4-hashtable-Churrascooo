@@ -78,7 +78,7 @@ void enlarge(HashMap * map)
       (map->size)++;  
     }
   }
-  free(oldBuckets);
+  return;
 }
 //---------------------------------------------------------
 HashMap * createMap(long capacity)
