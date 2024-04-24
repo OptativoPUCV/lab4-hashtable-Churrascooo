@@ -67,8 +67,15 @@ void enlarge(HashMap * map)
 
   map->size = 0;
 
-  
-
+  for (int i = 0 ; i < map->capacity ; i++)
+    {
+      if (buckets[i] != NULL)
+      {
+        insertMap(map, buckets[i]->key, buckets[i]->value);
+        map->size++;
+      }
+      return;
+    }
 }
 //---------------------------------------------------------
 HashMap * createMap(long capacity)
