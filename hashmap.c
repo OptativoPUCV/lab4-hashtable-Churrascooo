@@ -72,7 +72,6 @@ void enlarge(HashMap * map)
       if (buckets[i] != NULL)
       {
         insertMap(map, buckets[i]->key, buckets[i]->value);
-        map->size++;
       }
       return;
     }
