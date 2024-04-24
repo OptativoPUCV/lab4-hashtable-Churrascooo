@@ -110,6 +110,7 @@ void eraseMap(HashMap * map,  char * key)
           map->size--;
           return;
         }
+        pos = (pos+1) % map->capacity;
       }
   }
 }
