@@ -162,15 +162,16 @@ Pair * nextMap(HashMap * map)
   {
     return NULL;
   }
-  map->current = (map->current + 1) % map->capacity;
 
-  for (int i = 0 ; i < map->capacity ; i++)
+  long posicion = map->current + 1;
+
+  for (int i = posicion ; i < map->capacity ; i++)
   {
-    if (map->buckets[map->current] != NULL)
+    if (map->buckets[i] != NULL)
     {
-      return map->buckets[map->current];
+      map->current = i;
+      return map->buckets[i];
     }
-    map->current = (map->current + 1) % map->capacity;
   }
   return NULL;
 }
