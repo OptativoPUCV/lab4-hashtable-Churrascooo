@@ -164,7 +164,7 @@ Pair * nextMap(HashMap * map)
   }
   map->current = (map->current + 1) % map->capacity;
 
-  while (map->current != -1)
+  for (int i = 0 ; i < map->capacity ; i++)
   {
     if (map->buckets[map->current] != NULL)
     {
@@ -172,6 +172,6 @@ Pair * nextMap(HashMap * map)
     }
     map->current = (map->current + 1) % map->capacity;
   }
-  return map->buckets[map->current];
+  return NULL;
 }
 //---------------------------------------------------------
