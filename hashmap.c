@@ -165,7 +165,7 @@ Pair * nextMap(HashMap * map)
 
   long posicion = map->current + 1;
 
-  for (int i = posicion ; i < map->capacity ; i++)
+  for (long i = posicion ; i < map->capacity ; i++)
   {
     if (map->buckets[i] != NULL)
     {
