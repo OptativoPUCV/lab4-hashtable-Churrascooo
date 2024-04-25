@@ -328,3 +328,14 @@ Thu 25 Apr 2024 01:03:33 AM UTC:
  tests:  12|1
 total_score: 60/70
 7ff3cf9
+Thu 25 Apr 2024 01:10:43 AM UTC: 
+ hashmap.c | 27 +++++++++++++++++++++++++--
+ 1 file changed, 25 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:171:17: error: returning ‘Pair **’ from a function with incompatible return type ‘Pair *’ [-Werror=incompatible-pointer-types]
+  171 |       return map->buckets;
+      |              ~~~^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+6f89f4f
