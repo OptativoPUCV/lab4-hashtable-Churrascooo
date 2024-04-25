@@ -145,13 +145,13 @@ Pair * firstMap(HashMap * map)
   {
     return NULL;
   }
-  while (map->current != -1)
+  for (long i = 0 ; i < map->capacity; i++)
   {
-    if (map->buckets[map->current] != NULL)
+    if (map->buckets[i] != NULL && map->buckets[i]->key != NULL)
     {
-      return map->buckets[map->current];
+      map->current = i;
+      return map->buckets[i];
     }
-    map->current = (map->current + 1) % map->capacity;
   }
   return NULL;
 }
